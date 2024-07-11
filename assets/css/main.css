@@ -13,9 +13,9 @@
 :root {
   --background-color: #ffffff;
   /* Background color for the entire website, including individual sections */
-  --default-color: #444444;
+  --default-color: #3d4348;
   /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #222222;
+  --heading-color: #3e5055;
   /* Color for headings, subheadings and title throughout the website */
   --accent-color: #0d6efd;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -44,7 +44,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f4fafd;
+  --background-color: #f5faff;
   --surface-color: #ffffff;
 }
 
@@ -928,6 +928,12 @@ section,
   z-index: -1;
 }
 
+.services .service-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .services .service-item i {
   background: var(--accent-color);
   color: var(--contrast-color);
@@ -943,7 +949,7 @@ section,
 
 .services .service-item h4 {
   font-weight: 600;
-  margin: 15px 0 0 0;
+  margin: 0;
   transition: 0.3s;
   font-size: 20px;
 }
@@ -1540,6 +1546,12 @@ section,
   position: relative;
 }
 
+#contact .recaptcha {
+  display: flex;
+  justify-content: center;
+  padding: 0 14px 10px;
+}
+
 @media (max-width: 640px) {
   .contact {
     background-position: center 50px;
@@ -1762,7 +1774,7 @@ section,
 --------------------------------------------------------------*/
 
 #call-to-action {
-  background: linear-gradient(rgba(29, 99, 220, 0.2), rgba(0, 0, 0, 0.1)),
+  background: linear-gradient(color-mix(in srgb, var(--accent-color), transparent 80%), rgba(0, 0, 0, 0.1)),
     url(../img/call-to-action-bg.jpg) fixed center center;
   background-size: cover;
   padding: 60px 0;

@@ -106,7 +106,13 @@ jQuery(document).ready(function ($) {
       }
     });
     if (ferror) return false;
-    else var str = $(this).serialize();
+    // Kiểm tra reCAPTCHA
+    var recaptchaResponse = grecaptcha.getResponse();
+    if (recaptchaResponse.length === 0) {
+      $(".error-message").addClass("d-block").html("Vui lòng xác minh reCAPTCHA.");
+      return false;
+    }
+    var str = $(this).serialize();
     var action = $(this).attr("action");
     if (!action) {
       action =
@@ -120,7 +126,6 @@ jQuery(document).ready(function ($) {
       url: action,
       data: str,
       success: function (msg) {
-        console.log(msg);
         if (msg.result == "success") {
           $(".loading").removeClass("d-block");
           $(".error-message").removeClass("d-block");
