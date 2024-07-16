@@ -1459,7 +1459,7 @@ section,
 }
 
 .pricing ul {
-  padding: 20px 0;
+  padding: 0;
   list-style: none;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   text-align: left;
@@ -1677,6 +1677,10 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.contact .form-input {
+  border-radius: 4px !important;
 }
 
 /*--------------------------------------------------------------
@@ -1944,6 +1948,7 @@ section,
 .product .content {
   background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
   padding: 40px;
+  border-radius: 4px;
 }
 
 .product .content h3 {
