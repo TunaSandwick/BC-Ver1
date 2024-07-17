@@ -205,7 +205,6 @@ h6 {
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-  
 }
 
 /*--------------------------------------------------------------
@@ -580,7 +579,7 @@ h6 {
 }
 
 .footer .footer-about p {
-  padding-left: 8px   ;
+  padding-left: 8px;
 }
 
 .footer .footer-about a {
@@ -1667,16 +1666,22 @@ section,
 }
 
 .contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 36px;
   border-radius: 50px;
+  transition: 0.3s;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  background-color: transparent;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+  background: var(--accent-color);
 }
 
 .contact .form-input {
