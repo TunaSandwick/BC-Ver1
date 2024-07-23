@@ -337,7 +337,7 @@ h6 {
   .navmenu ul {
     display: none;
     position: absolute;
-    inset: 35px 0px 230px 0px;
+    inset: 35px 0px 400px 0px;
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
@@ -451,7 +451,7 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   position: relative;
 }
 
@@ -543,6 +543,7 @@ h6 {
 
 .footer .footer-links {
   margin-bottom: 30px;
+  align-items: center;
 }
 
 .footer .footer-links ul {
@@ -610,6 +611,16 @@ h6 {
 
 .footer .logo {
   width: 250px;
+}
+
+@media (max-width: 640px) {
+  .footer .footer-links {
+    align-items: start;
+  }
+
+  .footer .footer-top {
+    padding: 50px 30px 0px 30px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -860,15 +871,34 @@ section,
 }
 
 @media (max-width: 640px) {
+  #hero img {
+    display: none;
+  }
+
+  .hero {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 80px 0 60px 0;
+    display: flex;
+    align-content: center;
+  }
+
   .hero h1 {
     font-size: 28px;
     line-height: 36px;
+    align-self: center;
   }
 
   .hero p {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+    align-self: center;
+  }
+
+  .hero .btn-started {
+    justify-content: center;
   }
 
   .hero.section {
